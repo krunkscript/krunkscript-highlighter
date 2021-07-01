@@ -2,7 +2,7 @@
     "name": "krunkscript-hightlighter",
     "displayName": "KrunkScript Highlighter",
     "description": "A syntax highlighter for KrunkScript",
-    "icon": "./img/icon.png",
+    "icon": "https://raw.githubusercontent.com/kpal81xd/krunkscript-highlighter/master/img/icon.png?token=ALQDQIKJXLHASLHBOAEC3N3A43W64",
     "version": "1.0.0",
     "publisher": "KPal81",
     "private": true,
