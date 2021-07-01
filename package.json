@@ -1,9 +1,12 @@
 {
-    "name": "krnk",
-    "displayName": "KRNK",
-    "description": "KrunkScript Syntax Highlighter",
-    "author": "KPal81",
-    "version": "0.0.1",
+    "name": "krunkscript-hightlighter",
+    "displayName": "KrunkScript Highlighter",
+    "description": "A syntax highlighter for KrunkScript",
+    "icon": "./img/icon.png",
+    "version": "1.0.0",
+    "publisher": "KPal81",
+    "private": true,
+    "license": "Proprietary",
     "engines": {
         "vscode": "^1.56.0"
     },
@@ -13,7 +16,7 @@
     "contributes": {
         "languages": [{
             "id": "krnk",
-            "aliases": ["KrunkScript Programming Language", "krnk"],
+            "aliases": ["KrunkScript", "krnk"],
             "extensions": [".krnk"],
             "configuration": "./language-configuration.json"
         }],
