@@ -4,7 +4,7 @@
     "description": "A syntax highlighter for KrunkScript",
     "icon": "img/icon.png",
     "version": "1.0.0",
-    "publisher": "KPal81",
+    "publisher": "Yendis",
     "private": true,
     "license": "Proprietary",
 	"repository": {
@@ -29,5 +29,9 @@
             "scopeName": "source.krnk",
             "path": "./syntaxes/krnk.tmLanguage.json"
         }]
+    },
+    "scripts": {
+        "build": "vsce package",
+        "pub": "vsce publish"
     }
 }
