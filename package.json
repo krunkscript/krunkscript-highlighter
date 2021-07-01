@@ -5,6 +5,7 @@
     "icon": "img/icon.png",
     "version": "1.0.0",
     "publisher": "Yendis",
+    "author": "KPal81",
     "private": true,
     "license": "Proprietary",
 	"repository": {
