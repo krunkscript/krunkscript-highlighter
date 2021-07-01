@@ -1,0 +1,26 @@
+{
+    "name": "krnk",
+    "displayName": "KRNK",
+    "description": "KrunkScript Syntax Highlighter",
+    "author": "KPal81",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.56.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "krnk",
+            "aliases": ["KrunkScript Programming Language", "krnk"],
+            "extensions": [".krnk"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "krnk",
+            "scopeName": "source.krnk",
+            "path": "./syntaxes/krnk.tmLanguage.json"
+        }]
+    }
+}
