@@ -2,11 +2,15 @@
     "name": "krunkscript-hightlighter",
     "displayName": "KrunkScript Highlighter",
     "description": "A syntax highlighter for KrunkScript",
-    "icon": "https://raw.githubusercontent.com/kpal81xd/krunkscript-highlighter/master/img/icon.png?token=ALQDQIKJXLHASLHBOAEC3N3A43W64",
+    "icon": "https://raw.githubusercontent.com/kpal81xd/krunkscript-highlighter/master/img/icon.png",
     "version": "1.0.0",
     "publisher": "KPal81",
     "private": true,
     "license": "Proprietary",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kpal81xd/krunkscript-highlighter"
+	},
     "engines": {
         "vscode": "^1.56.0"
     },
