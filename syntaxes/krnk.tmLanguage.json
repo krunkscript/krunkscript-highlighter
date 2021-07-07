@@ -120,7 +120,7 @@
 			"patterns": [
 				{
 					"name": "constant.numeric",
-					"match": "\\d+\\.?\\d*"
+					"match": "(0x)?\\d+\\.?\\d*"
 				}
 			]
 		},
