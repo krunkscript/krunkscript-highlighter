@@ -8,10 +8,10 @@
     "author": "KPal81",
     "private": true,
     "license": "Proprietary",
-	"repository": {
-		"type": "git",
-		"url": "https://github.com/kpal81xd/krunkscript-highlighter"
-	},
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/kpal81xd/krunkscript-highlighter"
+    },
     "engines": {
         "vscode": "^1.56.0"
     },
@@ -19,17 +19,26 @@
         "Programming Languages"
     ],
     "contributes": {
-        "languages": [{
-            "id": "krnk",
-            "aliases": ["KrunkScript", "krnk"],
-            "extensions": [".krnk"],
-            "configuration": "./language-configuration.json"
-        }],
-        "grammars": [{
-            "language": "krnk",
-            "scopeName": "source.krnk",
-            "path": "./syntaxes/krnk.tmLanguage.json"
-        }]
+        "languages": [
+            {
+                "id": "krnk",
+                "aliases": [
+                    "KrunkScript",
+                    "krnk"
+                ],
+                "extensions": [
+                    ".krnk"
+                ],
+                "configuration": "./language-configuration.json"
+            }
+        ],
+        "grammars": [
+            {
+                "language": "krnk",
+                "scopeName": "source.krnk",
+                "path": "./syntaxes/krnk.tmLanguage.json"
+            }
+        ]
     },
     "scripts": {
         "build": "vsce package",
