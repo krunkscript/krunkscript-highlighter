@@ -45,7 +45,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.krnk",
-					"match": "\\b(public|dynamic|break|continue|action|return|if|else|for|while|addTo|remove|lengthOf|notEmpty|toStr|toNum)\\b"
+					"match": "\\b(public|static|break|continue|action|return|if|else|for|while|addTo|remove|lengthOf|notEmpty|toStr|toNum)\\b"
 				}
 			]
 		},
