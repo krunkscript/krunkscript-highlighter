@@ -44,8 +44,19 @@
 		"keywords": {
 			"patterns": [
 				{
+					"match": "(struct)\\s+([_a-zA-Z][_a-zA-Z0-9]*)",
+					"captures": {
+						"1": {
+							"name": "keyword.control.krnk"
+						},
+						"2": {
+							"name": "entity.name.type"
+						}
+					}
+				},
+				{
 					"name": "keyword.control.krnk",
-					"match": "\\b(public|static|break|continue|action|return|if|else|for|in|while|addTo|remove|lengthOf|notEmpty|toStr|toNum)\\b"
+					"match": "\\b(public|static|struct|break|continue|action|return|if|else|for|in|while|addTo|remove|lengthOf|notEmpty|toStr|toNum)\\b"
 				}
 			]
 		},
@@ -69,7 +80,7 @@
 			"patterns": [
 				{
 					"name":"constant.other",
-					"match": "[A-Z]+"
+					"match": "[A-Z]+(?=\\.)"
 				}
 			]
 		},
