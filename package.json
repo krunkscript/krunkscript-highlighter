@@ -3,7 +3,7 @@
     "displayName": "KrunkScript Highlighter",
     "description": "A syntax highlighter for KrunkScript",
     "icon": "img/icon.png",
-    "version": "1.0.4",
+    "version": "1.0.5",
     "publisher": "Yendis",
     "author": "KPal81",
     "private": true,
