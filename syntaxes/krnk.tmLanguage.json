@@ -64,7 +64,7 @@
 			"patterns": [
 				{
 					"name": "entity.name.type",
-					"match": "\\b(num|bool|str|obj)\\b"
+					"match": "\\b(bool|num|str|obj)\\b"
 				}
 			]
 		},
