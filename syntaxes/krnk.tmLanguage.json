@@ -56,7 +56,7 @@
 				},
 				{
 					"name": "keyword.control.krnk",
-					"match": "\\b(public|static|struct|break|continue|action|return|if|else|for|in|while|addTo|remove|lengthOf|notEmpty|toStr|toNum)\\b"
+					"match": "\\b(include|as|public|struct|break|continue|action|return|if|else|for|in|while|addTo|remove|lengthOf|notEmpty|hasProp|toStr|toNum)\\b"
 				}
 			]
 		},
