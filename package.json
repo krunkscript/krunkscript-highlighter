@@ -1,52 +1,59 @@
 {
-    "name": "krunkscript-hightlighter",
-    "displayName": "KrunkScript Highlighter",
-    "description": "A syntax highlighter for KrunkScript",
-    "icon": "img/icon.png",
-    "version": "1.0.5",
-    "publisher": "Yendis",
-    "author": "KPal81",
-    "private": true,
-    "license": "Proprietary",
-    "repository": {
-        "type": "git",
-        "url": "https://github.com/kpal81xd/krunkscript-highlighter"
-    },
-    "engines": {
-        "vscode": "^1.56.0"
-    },
-    "categories": [
-        "Programming Languages"
-    ],
-    "contributes": {
-        "languages": [
-            {
-                "id": "krnk",
-                "aliases": [
-                    "KrunkScript",
-                    "krnk"
-                ],
-                "icon": {
-                    "dark": "./img/file_type_ks.svg",
-                    "light": "./img/file_type_ks.svg"
-                },
-                "extensions": [
-                    ".krnk"
-                ],
-                "configuration": "./language-configuration.json"
-            }
-        ],
-        "grammars": [
-            {
-                "language": "krnk",
-                "scopeName": "source.krnk",
-                "path": "./syntaxes/krnk.tmLanguage.json"
-            }
-        ]
-    },
-    "main": "./src/index.js",
-    "scripts": {
-        "build": "vsce package",
-        "pub": "vsce publish"
-    }
+	"name": "krunkscript-hightlighter",
+	"displayName": "KrunkScript Highlighter",
+	"description": "A syntax highlighter for KrunkScript",
+	"icon": "img/icon.png",
+	"version": "1.0.5",
+	"publisher": "Yendis",
+	"author": "KPal81",
+	"private": true,
+	"license": "Proprietary",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/kpal81xd/krunkscript-highlighter"
+	},
+	"engines": {
+		"vscode": "^1.56.0"
+	},
+	"categories": [
+		"Programming Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "krnk",
+				"aliases": [
+					"KrunkScript",
+					"krnk"
+				],
+				"icon": {
+					"dark": "./img/file_type_ks.svg",
+					"light": "./img/file_type_ks.svg"
+				},
+				"extensions": [
+					".krnk"
+				],
+				"configuration": "./language-configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "krnk",
+				"scopeName": "source.krnk",
+				"path": "./syntaxes/krnk.tmLanguage.json"
+			}
+		]
+	},
+	"main": "./src/index.js",
+    "activationEvents": [],
+	"scripts": {
+		"build": "vsce package",
+		"publish": "vsce publish",
+        "lint": "eslint .",
+		"prettier": "prettier --write ."
+	},
+	"devDependencies": {
+		"eslint": "^8.20.0",
+		"prettier": "^2.7.1"
+	}
 }
