@@ -44,6 +44,7 @@
             }
         ]
     },
+    "main": "./src/index.js",
     "scripts": {
         "build": "vsce package",
         "pub": "vsce publish"
