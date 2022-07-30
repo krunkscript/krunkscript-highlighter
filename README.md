@@ -1,3 +1,3 @@
-# KrunkScript Syntax Highlighter
+# @krunkscript/hightlighter
 
 A syntax highlighter for KrunkScript

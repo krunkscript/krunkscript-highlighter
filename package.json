@@ -1,7 +1,7 @@
 {
-	"name": "krunkscript-hightlighter",
+	"name": "@krunkscript/highlighter",
 	"displayName": "KrunkScript Highlighter",
-	"description": "A syntax highlighter for KrunkScript",
+	"description": "KrunkScript syntax highlighter",
 	"icon": "img/icon.png",
 	"version": "1.0.5",
 	"publisher": "Yendis",
