@@ -7,6 +7,7 @@
 	"publisher": "Yendis",
 	"author": "KPal",
 	"license": "Proprietary",
+	"private": true,
 	"repository": {
 		"type": "git",
 		"url": "https://github.com/krunkscript/krunkscript-highlighter.git"

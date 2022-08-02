@@ -1,0 +1,23 @@
+# VSCode
+.vscode
+
+# ESLint
+.es*
+
+# Prettier
+.prettierrc
+
+# Images
+img
+
+# Syntaxes
+syntaxes
+
+# Langauge Config
+language-configuration.json
+
+# Extension
+*.vsix
+
+# KrunkScript
+*.krnk
