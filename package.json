@@ -10,7 +10,10 @@
 	"license": "Proprietary",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/kpal81xd/krunkscript-highlighter"
+		"url": "https://github.com/krunkscript/krunkscript.git"
+	},
+	"publishConfig": {
+		"registry": "https://npm.pkg.github.com"
 	},
 	"engines": {
 		"vscode": "^1.56.0"

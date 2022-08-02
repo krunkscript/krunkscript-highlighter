@@ -108,3 +108,6 @@ dist
 
 # Extension
 *.vsix
+
+# npmrc
+.npmrc
