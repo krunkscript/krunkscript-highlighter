@@ -50,7 +50,7 @@
     "activationEvents": [],
 	"scripts": {
 		"build": "vsce package",
-		"publish": "vsce publish",
+		"release": "vsce publish",
         "lint": "eslint .",
 		"prettier": "prettier --write ."
 	},
