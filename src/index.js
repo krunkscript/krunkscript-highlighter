@@ -46,6 +46,10 @@ function codeMirror() {
 				token: "atom",
 				regex: new RegExp(`\\b(true|false)\\b`),
 			},
+			{
+				token: "atom",
+				regex: new RegExp(`[A-Z]+(?=\\.)`),
+			},
 			{ token: "variable", regex: /\b[_a-zA-Z][_a-zA-Z0-9]*\b/ },
 			{ token: "number", regex: /\d+\.?\d*/ },
 			{ token: "string", regex: /("[^"\n\r]*")|('[^'\n\r]*')/ },
@@ -83,6 +87,14 @@ function highlightJS(hljs) {
 				variants: [
 					{
 						begin: `\\b(true|false)\\b`,
+					},
+				],
+			},
+			{
+				className: "literal",
+				variants: [
+					{
+						begin: `[A-Z]+(?=\\.)`,
 					},
 				],
 			},
