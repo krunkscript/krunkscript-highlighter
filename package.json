@@ -3,7 +3,7 @@
 	"displayName": "KrunkScript Highlighter",
 	"description": "KrunkScript syntax highlighter",
 	"icon": "img/icon.png",
-	"version": "1.0.5",
+	"version": "1.0.6",
 	"publisher": "Yendis",
 	"author": "KPal",
 	"license": "Proprietary",
@@ -47,11 +47,11 @@
 		]
 	},
 	"main": "./src/index.js",
-    "activationEvents": [],
+	"activationEvents": [],
 	"scripts": {
 		"build": "vsce package",
 		"release": "vsce publish",
-        "lint": "eslint .",
+		"lint": "eslint .",
 		"prettier": "prettier --write ."
 	},
 	"devDependencies": {
