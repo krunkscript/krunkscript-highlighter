@@ -9,7 +9,7 @@
 	"license": "Proprietary",
 	"repository": {
 		"type": "git",
-		"url": "https://github.com/krunkscript/krunkscript.git"
+		"url": "https://github.com/krunkscript/krunkscript-highlighter.git"
 	},
 	"publishConfig": {
 		"registry": "https://npm.pkg.github.com"
