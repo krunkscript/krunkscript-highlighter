@@ -47,6 +47,12 @@ function codeMirror() {
 				regex: new RegExp(`\\b(struct)\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b`),
 			},
 			{
+				token: ["type"],
+				regex: new RegExp(
+					`\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\s+action\\b`
+				),
+			},
+			{
 				token: ["type", null, "variable"],
 				regex: new RegExp(
 					`\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b`
