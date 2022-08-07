@@ -29,14 +29,14 @@ const TYPES = ["bool", "num", "str", "obj"];
 function codeMirror() {
 	return {
 		start: [
-			{ token: "comment", regex: /\s*#[^\n\r]*/ },
+			{ token: "comment", regex: new RegExp(`\\s*#[^\\n\\r]*`) },
 			{
 				token: "keyword",
 				regex: new RegExp(`\\b(${KEYWORDS.join("|")})\\b`),
 			},
 			{
-				token: ["def", null],
-				regex: /\b([_a-zA-Z][_a-zA-Z0-9]*)(\()/,
+				token: ["def"],
+				regex: new RegExp(`\\b([_a-zA-Z][_a-zA-Z0-9]*)(\\()`),
 			},
 			{
 				token: "type",
@@ -47,35 +47,46 @@ function codeMirror() {
 				regex: new RegExp(`\\b(struct)\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b`),
 			},
 			{
-				token: ["type", "variable"],
-				regex: new RegExp(`\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b`),
+				token: ["type", null, "variable"],
+				regex: new RegExp(
+					`\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b`
+				),
 			},
 			{
-				token: ["type", null],
-				regex: new RegExp(`\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*{`),
+				token: ["type"],
+				regex: new RegExp(`\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*({)`),
 			},
 			{
-				token: ["type", null],
-				regex: new RegExp(`<([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*>`),
+				token: [null, "type"],
+				regex: new RegExp(
+					`(<)([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(>)`
+				),
 			},
 			{
-				token: ["type", null],
-				regex: new RegExp(`\\(([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\)`),
+				token: [null, "type"],
+				regex: new RegExp(
+					`(\\()([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(\\))`
+				),
 			},
 			{
 				token: "atom",
 				regex: new RegExp(`\\b(true|false)\\b`),
 			},
 			{
-				token: "atom",
-				regex: new RegExp(`[A-Z]+(?=\\.)`),
+				token: ["atom"],
+				regex: new RegExp(`([A-Z]+)(\\.)`),
 			},
-			{ token: "variable", regex: /\b[_a-zA-Z][_a-zA-Z0-9]*\b/ },
-			{ token: "number", regex: /\d+\.?\d*/ },
-			{ token: "string", regex: /("[^"\n\r]*")|('[^'\n\r]*')/ },
-
-			{ regex: /[\{\[\(]/, indent: true },
-			{ regex: /[\}\]\)]/, dedent: true },
+			{
+				token: "variable",
+				regex: new RegExp(`\\b[_a-zA-Z][_a-zA-Z0-9]*\\b`),
+			},
+			{ token: "number", regex: new RegExp(`\\d+\\.?\\d*`) },
+			{
+				token: "string",
+				regex: new RegExp(`("[^"\\n\\r]*")|('[^'\\n\\r]*')`),
+			},
+			{ regex: new RegExp(`[\\{\\[\\(]`), indent: true },
+			{ regex: new RegExp(`[\\}\\]\\)]`), dedent: true },
 		],
 		meta: {
 			lineComment: "#",
