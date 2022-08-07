@@ -43,6 +43,26 @@ function codeMirror() {
 				regex: new RegExp(`\\b(${TYPES.join("|")})\\b`),
 			},
 			{
+				token: ["keyword", "type"],
+				regex: new RegExp(`\\b(struct)\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b`),
+			},
+			{
+				token: ["type", "variable"],
+				regex: new RegExp(`\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b`),
+			},
+			{
+				token: ["type", null],
+				regex: new RegExp(`\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*{`),
+			},
+			{
+				token: ["type", null],
+				regex: new RegExp(`<([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*>`),
+			},
+			{
+				token: ["type", null],
+				regex: new RegExp(`\\(([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\)`),
+			},
+			{
 				token: "atom",
 				regex: new RegExp(`\\b(true|false)\\b`),
 			},
