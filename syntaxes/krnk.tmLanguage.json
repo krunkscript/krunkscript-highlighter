@@ -67,6 +67,17 @@
 					}
 				},
 				{
+					"match": "\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\s+(action)\\b",
+					"captures": {
+						"1": {
+							"name": "entity.name.type"
+						},
+						"3": {
+							"name": "keyword.control.krnk"
+						}
+					}
+				},
+				{
 					"match": "\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b",
 					"captures": {
 						"1": {
