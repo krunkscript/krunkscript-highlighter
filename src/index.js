@@ -74,7 +74,13 @@ function codeMirror() {
 			{
 				token: [null, "type"],
 				regex: new RegExp(
-					`(?<!switch\\s*)(\\()([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(\\))`
+					`(\\()([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(\\))`
+				),
+			},
+			{
+				token: [null, null, "variable"],
+				regex: new RegExp(
+					`(switch)\\s*(\\()([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(\\))`
 				),
 			},
 			{
