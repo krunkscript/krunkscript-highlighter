@@ -56,17 +56,6 @@
 					"match": "\\b(bool|num|str|obj)\\b"
 				},
 				{
-					"match": "\\b(struct)\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b",
-					"captures": {
-						"1": {
-							"name": "keyword.control.krnk"
-						},
-						"2": {
-							"name": "entity.name.type"
-						}
-					}
-				},
-				{
 					"match": "\\b([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\s+(action)\\b",
 					"captures": {
 						"1": {

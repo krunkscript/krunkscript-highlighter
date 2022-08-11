@@ -34,6 +34,12 @@ function codeMirror() {
 		start: [
 			{ token: "comment", regex: new RegExp(`\\s*#[^\\n\\r]*`) },
 			{
+				token: ["keyword", null, "variable"],
+				regex: new RegExp(
+					`(switch\\s*)(\\()([_a-zA-Z][_a-zA-Z0-9]*)(\\))`
+				),
+			},
+			{
 				token: "keyword",
 				regex: new RegExp(`\\b(${KEYWORDS.join("|")})\\b`),
 			},
@@ -44,10 +50,6 @@ function codeMirror() {
 			{
 				token: "type",
 				regex: new RegExp(`\\b(${TYPES.join("|")})\\b`),
-			},
-			{
-				token: ["keyword", "type"],
-				regex: new RegExp(`\\b(struct)\\s+([_a-zA-Z][_a-zA-Z0-9]*)\\b`),
 			},
 			{
 				token: ["type"],
@@ -75,12 +77,6 @@ function codeMirror() {
 				token: [null, "type"],
 				regex: new RegExp(
 					`(\\()([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(\\))`
-				),
-			},
-			{
-				token: [null, null, "variable"],
-				regex: new RegExp(
-					`(switch)\\s*(\\()([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(\\))`
 				),
 			},
 			{
