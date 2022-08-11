@@ -15,6 +15,9 @@ const KEYWORDS = [
 	"for",
 	"in",
 	"while",
+	"switch",
+	"case",
+	"default",
 	"addTo",
 	"remove",
 	"lengthOf",
@@ -71,7 +74,7 @@ function codeMirror() {
 			{
 				token: [null, "type"],
 				regex: new RegExp(
-					`(\\()([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(\\))`
+					`(?<!switch\\s*)(\\()([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*(\\))`
 				),
 			},
 			{

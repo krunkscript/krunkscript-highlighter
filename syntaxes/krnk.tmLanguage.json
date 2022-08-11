@@ -45,7 +45,7 @@
 			"patterns": [
 				{
 					"name": "keyword.control.krnk",
-					"match": "\\b(include|as|public|struct|break|continue|action|return|if|else|for|in|while|addTo|remove|lengthOf|notEmpty|hasProp|toStr|toNum)\\b"
+					"match": "\\b(include|as|public|struct|break|continue|action|return|if|else|for|in|while|switch|case|default|addTo|remove|lengthOf|notEmpty|hasProp|toStr|toNum)\\b"
 				}
 			]
 		},
@@ -105,7 +105,7 @@
 					}
 				},
 				{
-					"match": "\\(([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\)",
+					"match": "(?<!switch\\s*)\\(([_a-zA-Z][_a-zA-Z0-9]*)\\s*(\\[\\])*\\)",
 					"captures": {
 						"1": {
 							"name": "entity.name.type"
