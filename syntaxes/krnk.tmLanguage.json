@@ -114,53 +114,57 @@
 		"global": {
 			"patterns": [
 				{
-					"name":"constant.other",
+					"name": "constant.other",
 					"match": "[A-Z]+(?=\\.)"
 				}
 			]
 		},
 		"function": {
-			"patterns": [{
-				"begin": "\\b([_a-zA-Z][_a-zA-Z0-9]*)\\(",
-				"beginCaptures": {
-					"1": {
-						"name": "entity.name.function"
-					}
-				},
-				"end": "\\)",
-				"patterns": [
-					{
-						"include": "#keywords"
+			"patterns": [
+				{
+					"begin": "\\b([_a-zA-Z][_a-zA-Z0-9]*)\\(",
+					"beginCaptures": {
+						"1": {
+							"name": "entity.name.function"
+						}
 					},
-					{
-						"include": "#types"
-					},
-					{
-						"include": "#boolvalues"
-					},
-					{
-						"include": "#global"
-					},
-					{
-						"include": "#function"
-					},
-					{
-						"include": "#identifiers"
-					},
-					{
-						"include": "#numbers"
-					},
-					{
-						"include": "#strings"
-					}
-				]
-			}]
+					"end": "\\)",
+					"patterns": [
+						{
+							"include": "#keywords"
+						},
+						{
+							"include": "#types"
+						},
+						{
+							"include": "#boolvalues"
+						},
+						{
+							"include": "#global"
+						},
+						{
+							"include": "#function"
+						},
+						{
+							"include": "#identifiers"
+						},
+						{
+							"include": "#numbers"
+						},
+						{
+							"include": "#strings"
+						}
+					]
+				}
+			]
 		},
 		"identifiers": {
-			"patterns": [{
-				"name": "variable.other.readwrite",
-				"match": "\\b[_a-zA-Z][_a-zA-Z0-9]*\\b"
-			}]
+			"patterns": [
+				{
+					"name": "variable.other.readwrite",
+					"match": "\\b[_a-zA-Z][_a-zA-Z0-9]*\\b"
+				}
+			]
 		},
 		"numbers": {
 			"patterns": [

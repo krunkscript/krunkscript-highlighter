@@ -88,10 +88,15 @@ function codeMirror() {
 				regex: new RegExp(`([A-Z]+)(\\.)`),
 			},
 			{
+				token: "number",
+				regex: new RegExp(
+					`\\b((0[xX][0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?([eE][+-]?[0-9]+)?))\\b`
+				),
+			},
+			{
 				token: "variable",
 				regex: new RegExp(`\\b[_a-zA-Z][_a-zA-Z0-9]*\\b`),
 			},
-			{ token: "number", regex: new RegExp(`\\d+\\.?\\d*`) },
 			{
 				token: "string",
 				regex: new RegExp(`("[^"\\n\\r]*")|('[^'\\n\\r]*')`),
@@ -144,7 +149,14 @@ function highlightJS(hljs) {
 				className: "variable",
 				variants: [{ begin: "\\b[_a-zA-Z][_a-zA-Z0-9]*\\b" }],
 			},
-			{ className: "number", variants: [{ begin: "\\d+\\.?\\d*" }] },
+			{
+				className: "number",
+				variants: [
+					{
+						begin: "\\b((0[xX][0-9a-fA-F]+)|([0-9]+(\\.[0-9]+)?([eE][+-]?[0-9]+)?))\\b",
+					},
+				],
+			},
 			{
 				className: "string",
 				variants: [{ begin: `("[^"\\n\\r]*")|('[^'\\n\\r]*')` }],
